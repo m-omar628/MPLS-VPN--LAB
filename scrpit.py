@@ -14,7 +14,7 @@ def file_open(file_name):
     with open (file_name) as f:
         file = f.read().splitlines()
     return file
-#define a function to ssh to the devices
+#defined function to ssh to the devices.
 def ssh_device(devcie_ip,user_name,pass_word):
     connect_to_device = {
                             'device_type': 'cisco_ios',
