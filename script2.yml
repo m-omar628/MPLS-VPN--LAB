@@ -1,5 +1,5 @@
 ---
-- name: configuring MPBGP and vrf-interfaces of PE1
+- name: configuring MPBGP and interfaces of PE1
   hosts: PE1router
   gather_facts: false
   tasks:
@@ -27,8 +27,8 @@
           - neighbor 10.0.0.4 send-community extended
         parents:  router bgp 65000
 
-#PE-2 interfaces configs
-- name: configuring MPBGP and vrf-interfaces of PE2
+#PE-2 configs
+- name: configuring MPBGP and interfaces of PE2
   hosts: PE2router
   gather_facts: false
   tasks:
