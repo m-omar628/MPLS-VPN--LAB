@@ -1,0 +1,3 @@
+mpls ip
+int range g0/0 - 1
+mpls ip

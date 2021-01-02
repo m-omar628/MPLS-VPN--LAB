@@ -1,0 +1,28 @@
+mpls ip
+ip vrf Customer_A
+rd 65000:1
+route-target both 65000:1
+ip vrf Customer_B
+rd 65000:2
+route-target both 65000:2
+int g0/1
+mpls ip
+int g0/0
+ip vrf forwarding Customer_A
+int g0/2
+ip vrf forwarding Customer_B
+router ospf 2 vrf Customer_A
+interface g0/0
+ip ospf 2 area 0
+router ospf 3 vrf Customer_B
+interface g0/2
+ip ospf 3 area 0
+router bgp 65000
+address-family ipv4 vrf Customer_A
+redistribute ospf 2
+address-family ipv4 vrf Customer_B
+redistribute ospf 3
+router ospf 2
+redistribute bgp 65000 subnets
+router ospf 3
+redistribute bgp 65000 subnets
