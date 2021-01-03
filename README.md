@@ -46,9 +46,9 @@ But before we run the playbook we first have to add the users' group to the host
 When you run the playbook and if everything working well the output of the playbook should look like this:
 ![](images/playbook.PNG)
 
-**And know we almost reached the end :D, but now let's do some verifications:**
+**And know we've almost reached the end :D, but now let's do some verifications:**
 Let's take **CE1A side** for the verification process:
-* First let's issue `show ip route ospf` and you'll see that it only knows CE2A routes :
+* First let's issue `show ip route ospf` and you'll see that it only knows about CE2A routes:
 ![](images/pic10.PNG)
 
 * Also if you issue `traceroute 172.16.0.2` you will see:
