@@ -1,5 +1,5 @@
  # MPLS-VPN--LAB
-A simple demo of automating the configuration of MPLS VPN using python and Ansible.
+A simple demo of automating MPLS VPN configurations using python and Ansible.
 
 ### LAB overview
 ![](images/Topology.PNG)
