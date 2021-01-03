@@ -4,7 +4,7 @@ A simple demo of automating MPLS VPN configurations using python and Ansible.
 ### LAB overview
 ![](images/Topology.PNG)
 In this lab the initial configs are as follow:
-* Configure all interfaces with corresponding IPs as in the diagram.
+* Configure all interfaces with their corresponding IPs as in the diagram.
 * Between Provider routers I've build an ospf neighborship with a PID of 1.  
 * Enable `SSH` on (PE1, PE2, P1, P2).
 * At **CE1A** and **CE2A** I've configured ospf with a PID of 2.
