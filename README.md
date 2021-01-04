@@ -38,6 +38,7 @@ And now it's time for Ansible playbook to solve this issue!!! :D
 ### Ansible side of configuration:
 * You can chick this [link](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html) for `Ansible` installation.
 
+
 For `Ansible` playbook, it will reassign IP addresses to PE1 and PE2 interfaces (that have been added to VRF) and also build `BGP` neighbourship between PE1 and PE2.
 
 But before we run the playbook we first have to add the users' group to the hosts' inventory file so it will be something like this:
@@ -45,6 +46,9 @@ But before we run the playbook we first have to add the users' group to the host
 
 When you run the playbook and if everything working well the output of the playbook should look like this:
 ![](images/playbook.PNG)
+
+if you're facing a problem with ssh key ckecking try to uncomment this line in `ansible.cfg` file: 
+![](images/ssh_key.PNG)
 
 **And know we've almost reached the end :D, but now let's do some verifications:**
 Let's take **CE1A side** for the verification process:
